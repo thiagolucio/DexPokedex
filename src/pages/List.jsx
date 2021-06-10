@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Button, Grid, Container, SimpleGrid } from '@chakra-ui/react';
+import { SimpleGrid } from '@chakra-ui/react';
 import { Bar } from '../components/Bar/Bar';
 import Search from '../components/Search/Search';
 import Card from '../components/Card/Card';
