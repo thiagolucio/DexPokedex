@@ -10,13 +10,12 @@ import {
 import { Link } from "react-router-dom";
 import { SiPokemon } from 'react-icons/si';
 import { Logo } from '../components/Logo/Logo';
-import { Footer } from '../components/Footer/Footer';
 
 const Home = () => {
   return (
     <Box textAlign="center" fontSize="xl" >
       <ColorModeSwitcher justifySelf="flex-end" mt="4" />
-      <Grid minH="100vh" p={2}>
+      <Grid minH="75vh">
         <VStack spacing={2}>
           <SiPokemon size={180} />
           <div className="bounce-in-top">
@@ -25,7 +24,7 @@ const Home = () => {
           <Link to="/list">
             <Button
               size="md"
-              m="4"
+              mt="4"
               height="48px"
               width="200px"
               border="1px"
@@ -34,9 +33,6 @@ const Home = () => {
             >ENTRAR
             </Button>
           </Link>
-        </VStack>
-        <VStack spacing={1}>
-            <Footer/>
         </VStack>
       </Grid>
     </Box>
