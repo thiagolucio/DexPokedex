@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { getPokemon } from '../services/api';
 import { useLocation } from 'react-router-dom';
+import { Bar } from '../components/Bar/Bar';
 import {
   Box,
   Center,
@@ -37,11 +38,13 @@ const Pokemon = () => {
   const { id, name, height, weight, base_experience } = pokemon;
 
   return (
+    <>
+    <Bar/>
     <SimpleGrid
       columns={1}
       spacing={4}
       p={5}
-      bgGradient="linear(to-l, #7928CA,#FF0080)"
+      
       minChildWidth="370"
       width="100%"
     >
@@ -158,6 +161,7 @@ const Pokemon = () => {
       <Box height="80px"></Box>
       <Box height="80px"></Box>
     </SimpleGrid>
+    </>
   );
 };
 

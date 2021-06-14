@@ -13,11 +13,13 @@ import {
   InputLeftElement,
   Center
 } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
 import { login } from '../../services/apiuser';
 import AnimeLogin from './tenor.gif';
 import { FaEyeSlash, FaEye } from 'react-icons/fa';
 import { HiOutlineUserCircle } from 'react-icons/hi';
 import { CgPassword } from 'react-icons/cg';
+import { RiLoginCircleLine } from 'react-icons/ri';
 import './Login.css';
 
 const Login = () => {
@@ -70,7 +72,7 @@ const Login = () => {
           </Center>
           <Box mt={10}>
             <Stack spacing={5}>
-              <InputGroup >
+              <InputGroup>
                 <InputLeftElement pointerEvents="none" color="gray.300" fontSize="1.2em">
                   <HiOutlineUserCircle size={20} />
                 </InputLeftElement>
@@ -106,6 +108,14 @@ const Login = () => {
                   </Button>
                 </InputRightElement>
               </InputGroup>
+            </Stack>
+            <Stack  mt={4}>
+            <Link to="/list">
+              {/* <Button leftIcon={<RiLoginCircleLine />} isFullWidth colorScheme="teal" variant="solid" onClick={onSubmitHandler}> */}
+              <Button leftIcon={<RiLoginCircleLine />} isFullWidth colorScheme="teal" variant="solid">
+                Entrar
+              </Button>
+            </Link>
             </Stack>
           </Box>
         </Box>

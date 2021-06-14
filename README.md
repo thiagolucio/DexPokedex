@@ -13,36 +13,33 @@ Projeto criado baseado em desafio fornecido pela empresa "Dextra is Muted"
 
 > Por ser um desafio, resolvi utilizar algumas soluções/ libraries que não tinha usado até momento. São elas: 
 
-
-
 <div align="center">
 <img src="https://vitejs.dev/logo.svg" alt="vitejs logo" width="160px"/>
 </div>
 
-- [Vite](https://vitejs.dev/) : Um novo Bundle Management que tenho ouvido falar ser muito mais performático que o Webpack, Rollup e Parcel e é claro o React Create Component. Isso porque ele basicamente pré-agrupa dependências usando esbuild(escrito em Go) e pré-empacota dependências de 10-100 vezes mais rápida que os outros empacotadores citados.
-  
-  Outra grande vantagem do Vite é que ele trabalha com código sobre demanda, entregando somente aquele trecho de código que está sendo requisitado, sendo só processado aquele código que será usado ao invés de recarregar todo o content.
-  
-  Ao invés de ficar me extendendo em explicações, é mais fácil ver ou direto no Site do Vite suas vantagens (https://vitejs.dev/guide/why.html#the-problems) ou então simplesmente dar uma olhada nesse vídeo curto aqui que encontrei no Youtube que vai te fazer entender porque ele é muito bom.
-  
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/LQQ3CR2JTX8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  
-  
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/LQQ3CR2JTX8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/LQQ3CR2JTX8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
+## ViteJS
 
+[Vite](https://vitejs.dev/) : Um novo Bundle Management que tenho ouvido falar ser muito mais performático que o Webpack, Rollup e Parcel e é claro o React Create Component. Isso porque ele basicamente pré-agrupa dependências usando esbuild(escrito em Go) e pré-empacota dependências de 10-100 vezes mais rápida que os outros empacotadores citados.
+
+Outra grande vantagem do Vite é que ele trabalha com código sobre demanda, entregando somente aquele trecho de código que está sendo requisitado, sendo só processado aquele código que será usado ao invés de recarregar todo o content.
+
+Ao invés de ficar me extendendo em explicações, é mais fácil ver ou direto no Site do Vite suas vantagens (https://vitejs.dev/guide/why.html#the-problems) ou então simplesmente dar uma olhada nesse vídeo curto aqui que encontrei no Youtube que vai te fazer entender porque ele é muito bom.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LQQ3CR2JTX8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LQQ3CR2JTX8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LQQ3CR2JTX8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 [Vite 2.0 Crash Course | Super Fast Build Tool for JavaScript, React, Vue, Svelte, &amp; Lit (2021) - YouTube](https://www.youtube.com/watch?v=LQQ3CR2JTX8&t=457s)
 
 
 
+## Chakra
 
-- [Biblioteca Chakra](https://chakra-ui.com/)  : Biblioteca visual semântica criada dedicada ao React e que já recebeu o reconhecimento por muita gente da comunidade. Ela se destaca por usar uma linguagem semântica e intuitiva, possuír um design clean e moderno e permitir a permeabilidade de componentes e ser bastante produtiva. Vale inclusive também dar uma olhada e conhecer melhor ela. Já tem 18.6K no Github. Eu nunca tinha usado e me senti à vontade com ela criando o layout do segundo componente. 
-
-
+[Biblioteca Chakra](https://chakra-ui.com/)  : Biblioteca visual semântica criada dedicada ao React e que já recebeu o reconhecimento por muita gente da comunidade. Ela se destaca por usar uma linguagem semântica e intuitiva, possuír um design clean e moderno e permitir a permeabilidade de componentes e ser bastante produtiva. Vale inclusive também dar uma olhada e conhecer melhor ela. Já tem 18.6K no Github. Eu nunca tinha usado e me senti à vontade com ela criando o layout do segundo componente. 
 
 ## Sobre:
 
@@ -54,8 +51,12 @@ Projeto criado baseado em desafio fornecido pela empresa "Dextra is Muted"
 
 - `yarn dev` para rodar o projeto em sua máquina. 
 
-
-
 ---
 
-EM ANDAMENTO ....
+## Desafio:  [challenges/POKEDEX.md at master · dextra/challenges · GitHub](https://github.com/dextra/challenges/blob/master/frontend/POKEDEX.md)
+
+
+
+### Realziado até : 13/06/2021:
+
+- Animações usadas, Layout e Design, responsividade, página de listagem e página de detalhes além de página de Login (bônus).
