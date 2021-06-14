@@ -22,11 +22,11 @@ const Card = (props) => {
       >
         <Center>
           <Box padding={6}>
-            {!Img ? 
+            {!Img ? (
               <Box padding="4" centerContent>
                 <SkeletonCircle h={128} w={128} startColor="gray.50" endColor="gray.900" />
               </Box>
-             : 
+            ):(
               <Image
                 src={Img}
                 alt="Imagem do Pokemon"
@@ -37,12 +37,12 @@ const Card = (props) => {
                 m={4}
                 offset={10}
               />
-            }
-            {!props ? 
+            )}
+            {!props ? (
               <Box padding="4" centerContent>
                 <SkeletonText mt-3 spacing="3" startColor="gray.900" endColor="gray.50" />
               </Box>
-             : 
+             ):(
               <>
                 <Text fontSize="xl" textAlign="center">
                   {props.id}
@@ -53,7 +53,7 @@ const Card = (props) => {
                   </Text>
                 </Badge>
               </>
-            }
+             )}
           </Box>
         </Center>
       </Box>

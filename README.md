@@ -57,6 +57,40 @@ Ao invés de ficar me extendendo em explicações, é mais fácil ver ou direto 
 
 
 
-### Realziado até : 13/06/2021:
+### Realizado até : 13/06/2021:
 
-- Animações usadas, Layout e Design, responsividade, página de listagem e página de detalhes além de página de Login (bônus).
+- Animações, artes e imagens finalizadas.
+
+- Layout e Design das páginas.
+
+- Responsividade das páginas criadas.
+
+- Página de listagem de Pokemons.
+
+- Página de Detalhes do Pokemon escolhido.
+
+- Página de Login (Bônus e não finalizada ainda a lógica)
+
+- Squeleton(loading) 
+  
+  
+
+> Para visualizar o loading dos cards da listagem funcionando apague provisóriamente o "!" na página "Card.jsx", linha 25 no trecho `{!Img ?`
+> 
+> desta forma o squeleton lazing aparecerá para imagem. 
+> 
+> Logo abaixo na linha, 41, você poderá fazer a mesma coisa com `{!props ?` e ver ele em conjunto com a imagem fazer o lazing. Pode estar se perguntando porque fiz eles de forma separada. É porque eles podem ter tempo de carregamento diferentes. Numa primeira concepção eu os fiz juntos mas depois achei melhor mudar. 
+
+
+
+### @TODO:
+
+- Filtro de pesquisa por nome e id/ número (lógica).
+
+- Pokedex recebendo os pokemons selecionados.
+
+
+
+### Backlog (testes unitários efetuados):
+
+- Listagem regressiva sendo permitida (lógica para impedir)
