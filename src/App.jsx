@@ -7,7 +7,8 @@ import {
 import { ChakraProvider, theme, Center } from '@chakra-ui/react';
 import Home from './pages/Home';
 import List from './pages/List';
-import Detail from './pages/Detail';
+import Pokemon from './pages/Pokemon';
+import Login from './components/Login/Login';
 
 import './App.css';
 import { Footer } from './components/Footer/Footer';
@@ -19,10 +20,9 @@ function App() {
           <Router>
             <Switch>
               <Route exact path="/" component={Home} />              
-              <Route path="/list" component={List} />
-              <Route path="/detail/:id" component={Detail} />
-              {/* <Route path={`${match.path}/:pokemonId`}  component={Detail} /> */}
-              {/* <Route path="/detail" component={Detail} /> */}
+              <Route path="/list" component={List} />             
+              <Route path='/pokemon/:id' component={Pokemon} />
+              <Route path="/login" component={Login} />
             </Switch>
           </Router>
           <Center>

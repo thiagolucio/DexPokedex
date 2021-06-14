@@ -6,32 +6,32 @@ import Card from '../components/Card/Card';
 import Pokedex from '../components/Pokedex/Pokedex';
 import { GrLinkPrevious, GrLinkNext } from 'react-icons/gr';
 
+import '../App.css';
+
 import { getPokemons, getMorePokemons } from '../services/apipokemons';
 
 const List = () => {
   const [pokemons, setPokemons] = useState([]);
   const [count, setCount] = useState(1);
 
+  // @TODO passar paginacao para https://chakra-ui.com/docs/hooks/use-controllable
+
   /* Use effect to get data wainting */
   useEffect(() => {
     getPokemons().then((data) => {
-      setPokemons(data);      
+      setPokemons(data);
     });
   }, []);
 
-
-  /* Previews Page and previous button */
   const prevButton = () => {
     getMorePokemons(count - 11).then((data) => {
       setPokemons(data);
       setCount((prevCount) => {
-        return prevCount - 10;
+        return prevCount - 11;
       });
     });
   };
 
-
-  /* Next page and Next button */
   const nextButton = () => {
     getMorePokemons(count + 9).then((data) => {
       setPokemons(data);
@@ -40,8 +40,6 @@ const List = () => {
       });
     });
   };
-
-
 
   return (
     <>
@@ -61,25 +59,27 @@ const List = () => {
         )}
       </Center>
       <Center m={8}>
-          <SimpleGrid columns={2} spacing={10}>
-            <IconButton
-              bg="#FF0080"
-              isRound="true"
-              aria-label="Página Anterior"
-              size="lg"
-              icon={<GrLinkPrevious size="24px" />}
-              onClick={prevButton}
-            />
-            <IconButton
-              bg="#FF0080"              
-              isRound="true"                        
-              aria-label="Próxima Página"
-              size="lg"
-              icon={<GrLinkNext size="24px" />}
-              onClick={nextButton}
-            />
-          </SimpleGrid>
-        </Center>
+        <SimpleGrid columns={2} spacing={10}>
+          <IconButton
+            bg="#FF0080"
+            w="200px"
+            isRound="true"
+            aria-label="Página Anterior"
+            size="lg"
+            icon={<GrLinkPrevious size="24px" />}
+            onClick={prevButton}
+          />
+          <IconButton
+            bg="#FF0080"
+            w="200px"
+            isRound="true"
+            aria-label="Próxima Página"
+            size="lg"
+            icon={<GrLinkNext size="24px" />}
+            onClick={nextButton}
+          />
+        </SimpleGrid>
+      </Center>
     </>
   );
 };
