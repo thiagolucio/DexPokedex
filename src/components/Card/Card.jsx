@@ -1,9 +1,26 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { Box, Image, Badge, SkeletonCircle, SkeletonText, Center, Text } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
+import { getPokemon } from '../services/api';
+
 import './Card.css';
 
 const Card = (props) => {
+  const [currentPokemon, setCurrentPokemon] = useState([])
+
+  
+  useEffect(() => {
+    async function loadPokemon() {
+            const {id, name, order} =  await getPokemon(props.name).then(result => result)
+            setCurrentPokemon({id,
+                name,
+                order, 
+                image: `https://pokeres.bastionbot.org/images/pokemon/${id}.png`})
+    }
+        loadPokemon()
+}, [props])
+
+
   const Img = `https://pokeres.bastionbot.org/images/pokemon/${props.id}.png`;
   return (
     <Link to={{ pathname: `/pokemon/${props.name}` }}>

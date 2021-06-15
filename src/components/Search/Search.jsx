@@ -1,11 +1,23 @@
-import React from 'react';
+import React, {useState} from 'react';
 // import { MatchPokemon } from '../../services/api'
 import { Button, Container, Input, InputGroup, InputRightElement, Text } from '@chakra-ui/react';
 import { CgSearch, CgSearchLoading } from 'react-icons/cg';
+import { getPokemons } from '../../services/apipokemons';
 
-const Search = () => {
-  const [filter, setFilter] = React.useState(false);
-  const handleClick = () => setFilter(!filter);
+
+
+const Search = ({pokemonSearch}) => {
+  const [pokemons, setPokemons] = useState([]);
+
+
+  async function handleSearch() {
+    if(pokemons) {
+      const response = await getPokemons(pokemons.toLowerCase())
+      .then(response => response)
+      pokemonSearch(response)
+    }
+  }
+  
 
   return (
     <Container maxW="container.lg" mt={6} mb={6}>
@@ -18,6 +30,7 @@ const Search = () => {
           type="text"
           border="2px"
           placeholder="Nome/ Número"
+          value={pokemons} onChange={e => setPokemons(e.target.value)}
         />
         <InputRightElement width="6rem">
           <Button 
@@ -27,9 +40,9 @@ const Search = () => {
             borderTopLeftRadius="0"
             borderBottomLeftRadius="0"
             bgGradient="linear(to-l, #7928CA,#FF0080)" 
-            onClick={handleClick}
+            onClick={handleSearch}
             >
-          {filter ? <CgSearchLoading size={24} /> : <CgSearch size={24} />}
+          {pokemons ? <CgSearchLoading size={24} /> : <CgSearch size={24} />}
           </Button>          
         </InputRightElement>
       </InputGroup>
