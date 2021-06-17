@@ -17,8 +17,6 @@ Projeto criado baseado em desafio fornecido pela empresa "Dextra is Muted"
 <img src="https://vitejs.dev/logo.svg" alt="vitejs logo" width="160px"/>
 </div>
 
-
-
 ## ViteJS
 
 [Vite](https://vitejs.dev/) : Um novo Bundle Management que tenho ouvido falar ser muito mais performático que o Webpack, Rollup e Parcel e é claro o React Create Component. Isso porque ele basicamente pré-agrupa dependências usando esbuild(escrito em Go) e pré-empacota dependências de 10-100 vezes mais rápida que os outros empacotadores citados.
@@ -34,8 +32,6 @@ Ao invés de ficar me extendendo em explicações, é mais fácil ver ou direto 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/LQQ3CR2JTX8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 [Vite 2.0 Crash Course | Super Fast Build Tool for JavaScript, React, Vue, Svelte, &amp; Lit (2021) - YouTube](https://www.youtube.com/watch?v=LQQ3CR2JTX8&t=457s)
-
-
 
 ## Chakra
 
@@ -55,9 +51,7 @@ Ao invés de ficar me extendendo em explicações, é mais fácil ver ou direto 
 
 ## Desafio:  [challenges/POKEDEX.md at master · dextra/challenges · GitHub](https://github.com/dextra/challenges/blob/master/frontend/POKEDEX.md)
 
-
-
-### Realizado até : 13/06/2021:
+### Realizado até : 16/06/2021:
 
 - Animações, artes e imagens finalizadas.
 
@@ -72,8 +66,8 @@ Ao invés de ficar me extendendo em explicações, é mais fácil ver ou direto 
 - Página de Login (Bônus e não finalizada ainda a lógica)
 
 - Squeleton(loading) 
-  
-  
+
+- Filtro por nome do Pokemon
 
 > Para visualizar o loading dos cards da listagem funcionando apague provisóriamente o "!" na página "Card.jsx", linha 25 no trecho `{!Img ?`
 > 
@@ -81,15 +75,11 @@ Ao invés de ficar me extendendo em explicações, é mais fácil ver ou direto 
 > 
 > Logo abaixo na linha, 41, você poderá fazer a mesma coisa com `{!props ?` e ver ele em conjunto com a imagem fazer o lazing. Pode estar se perguntando porque fiz eles de forma separada. É porque eles podem ter tempo de carregamento diferentes. Numa primeira concepção eu os fiz juntos mas depois achei melhor mudar. 
 
-
-
 ### @TODO:
 
-- Filtro de pesquisa por nome e id/ número (lógica).
+- Filtrar por id do pokemon (não vi muito sentido mas...é regra de negócio então).
 
-- Pokedex recebendo os pokemons selecionados.
-
-
+- Pokedex recebendo os pokemons selecionados, informando o preço, permitir deletar da pokedex algum pokemon adicionado e o total da compra e a rotina para finalizar a compra (modal de confirmação talvez).
 
 ### Backlog (testes unitários efetuados):
 
