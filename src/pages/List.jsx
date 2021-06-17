@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Center, IconButton, SimpleGrid, Spinner } from '@chakra-ui/react';
+import { Center, Container, IconButton, Input, InputGroup, SimpleGrid, Spinner, Text } from '@chakra-ui/react';
 import { Bar } from '../components/Bar/Bar';
-import Search from '../components/Search/Search';
+
 import Card from '../components/Card/Card';
 import Pokedex from '../components/Pokedex/Pokedex';
 import { GrLinkPrevious, GrLinkNext } from 'react-icons/gr';
@@ -15,8 +15,6 @@ const List = () => {
   const [count, setCount] = useState(1);
 
   // @TODO passar paginacao para https://chakra-ui.com/docs/hooks/use-controllable
-
-  /* Use effect to get data wainting */
   useEffect(() => {
     getPokemons().then((data) => {
       setPokemons(data);
@@ -41,18 +39,44 @@ const List = () => {
     });
   };
 
+
+const[searchPokemon, setSearchPokemon] = useState('');
+
+
   return (
     <>
       <Bar />
-      <Pokedex />
-      <Search />
+      <Pokedex />     
+      <Container maxW="container.lg" mt={6} mb={5}>
+        <Text fontSize="30px" color="gray.600">Pesquisar Pokemon</Text>
+        <Center>
+          <InputGroup size="lg">
+            <Input
+              pr="4.5rem"
+              borderColor="pink.500"
+              focusBorderColor="pink.500"
+              type="text"
+              border="2px"
+              placeholder="Digite o nome do Pokemon"                           
+              onChange={event => {setSearchPokemon(event.target.value)}}
+            />
+          </InputGroup>
+        </Center>
+      </Container>
       <Center>
         {!pokemons['results'] ? (
           <Spinner size="xl" color="pink.500" />
         ) : (
           <SimpleGrid columns={[1, null, 4]} spacingX="40px" spacingY="20px" p={4}>
             {pokemons['results'] &&
-              pokemons['results'].map((pokemon, index) => {
+              // eslint-disable-next-line array-callback-return
+              pokemons['results'].filter((val) => {
+                if (searchPokemon === "") {
+                  return val
+                } else if (val.name.toLowerCase().includes(searchPokemon.toLocaleLowerCase())) {
+                  return val
+                } 
+              }).map((pokemon, index) => {
                 return <Card key={index} {...pokemon} id={count + index} />;
               })}
           </SimpleGrid>

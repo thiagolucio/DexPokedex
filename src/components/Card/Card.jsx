@@ -44,7 +44,7 @@ const Card = (props) => {
               </Box>
              ):(
               <>
-                <Text fontSize="xl" textAlign="center">
+                <Text fontSize="xl" textAlign="center" color="white">
                   {props.id}
                 </Text>
                 <Badge borderRadius="full" px="6" colorScheme="gray" m={4}>

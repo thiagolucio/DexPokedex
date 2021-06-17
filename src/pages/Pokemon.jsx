@@ -74,12 +74,12 @@ const Pokemon = () => {
                   <Box height="80px" key={index} p={5}>
                     <Center>
                       <VStack>
-                        <Badge ml="1" fontSize="0.8em" variant="subtle" colorScheme="dark">
+                        <Badge ml="1" fontSize="0.8em" variant="subtle" colorScheme="purple">
                           <Text fontSize="md" fontWeight="bold">
                             {stat['stat']['name']}
                           </Text>
                         </Badge>
-                        <Circle size="60px" bg="gray.200" color="pink.500">
+                        <Circle size="60px" bgGradient="linear(to-l, #7928CA,#FF0080)" color="gray.50">
                           <Text fontSize="xl">
                             <b>{stat.base_stat}</b>
                           </Text>
@@ -92,14 +92,14 @@ const Pokemon = () => {
           </Stack>
         </Center>
         <Container mt={100} maxW="container.lg">
-          <Tabs isFitted variant="unstyled" color="gray.50">
-            <TabList mb="1em" bg="purple">
+          <Tabs isFitted variant="unstyled" color="gray.50" bgGradient="linear(to-l, #7928CA,#FF0080)">
+            <TabList mb="1em" bgGradient="linear(to-l, #7928CA,#FF0080)">
               <Tab m={1}>Informations</Tab>
               <Tab>Abilities</Tab>
               <Tab>Pokecard</Tab>
             </TabList>
             <TabPanels>
-              <TabPanel>
+              <TabPanel >
                 <SimpleGrid columns={[2, null, 3]} spacing={10} minChildWidth="300px" className="text-center">
                   <Box bg="purple" height="60px">   
                     <Text fontSize="xl" fontWeight="bold">Number</Text>
